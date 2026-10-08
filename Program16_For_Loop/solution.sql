@@ -1,18 +1,10 @@
-USE CollegeDB;
-
-DROP PROCEDURE IF EXISTS DisplayNumbers;
-
-DELIMITER $$
-
-CREATE PROCEDURE DisplayNumbers()
+DECLARE
+    marks NUMBER := 55;
 BEGIN
-
-    -- Declare counter variable
-
-    -- Write a loop to display numbers from 1 to 10
-
-END $$
-
-DELIMITER ;
-
-CALL DisplayNumbers();
+    IF marks >= 40 THEN
+        DBMS_OUTPUT.PUT_LINE('Student has Passed');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Student has Failed');
+    END IF;
+END;
+/
